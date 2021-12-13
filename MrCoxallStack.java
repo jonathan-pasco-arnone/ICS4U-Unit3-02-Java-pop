@@ -28,9 +28,13 @@ public final class MrCoxallStack {
 
     /**
     * Pops the top number off of the ArrayList.
+    *
+    * @return returns the popped value
     */
-    public void pop() {
+    public int pop() {
+        final int poppedNumber = stackAsArray.get(0);
         stackAsArray.remove(0);
+        return poppedNumber;
     }
 
     /**

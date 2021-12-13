@@ -34,12 +34,19 @@ final class Pop {
         // use MrCoxallStack class
         final MrCoxallStack aStack = new MrCoxallStack();
         final String addedNewNumber = "Added new number";
-        final String popNumber = "Popped the top number";
+        final String popNumber = "Popped ";
         final String newStack = "New Stack: ";
 
         final int fourtyTwo = 42;
         final int ninetyOne = 91;
+        final int fourTeen = 14;
         System.out.println("Initial stack: ");
+        aStack.showStack();
+
+        // Adding 14
+        System.out.println(addedNewNumber);
+        aStack.push(fourTeen);
+        System.out.println(newStack);
         aStack.showStack();
 
         // Adding 42
@@ -55,8 +62,8 @@ final class Pop {
         aStack.showStack();
 
         // Removing the top number (currently 42)
-        System.out.println(popNumber);
-        aStack.pop();
+        final int poppedNumber = aStack.pop();
+        System.out.println(popNumber + poppedNumber);
         aStack.showStack();
     }
 }
